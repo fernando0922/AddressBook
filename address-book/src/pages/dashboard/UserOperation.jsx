@@ -2,12 +2,16 @@ import React from "react";
 import "antd/dist/antd.css";
 import { Input } from "antd";
 import AddModal from "./add/AddModal";
-
+import { searchUser } from "../../api/searchUser";
 
 const { Search } = Input;
 
-const UserOperation = () => {
-  const onSearch = (value) => console.log("value");
+const UserOperation = (props) => {
+  const onSearch = (value) => {
+    searchUser(value)
+      .then((a) => props.fromSearch(a))
+      .catch((e) => console.log(e));
+  };
 
   return (
     <>
@@ -16,7 +20,7 @@ const UserOperation = () => {
           placeholder="input search text"
           onSearch={onSearch}
           allowClear
-      enterButton="Search"
+          enterButton="Search"
         />
       </div>
       <AddModal />

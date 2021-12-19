@@ -26,6 +26,10 @@ const Dashboard = () => {
       });
   }, []);
 
+  const fromSearch = (value) =>{
+    setContacts(value)
+  }
+
   return (
     <div className="home-container">
       <div className="nav-header">
@@ -33,7 +37,7 @@ const Dashboard = () => {
       </div>
 
       <div className="user-operation">
-        <UserOperation />
+        <UserOperation fromSearch = {fromSearch}/>
       </div>
 
       <div className="contact-list">
