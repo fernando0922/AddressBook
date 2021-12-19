@@ -26,6 +26,27 @@
     color: var(--errorColor);
 }
 
+/* one card css - start */
+
+.information-container{
+    margin-top: 7%;
+}
+
+.contact-Information{
+    display: flex;
+    justify-content: space-between;
+    color:  #8A2BE2 !important;
+}
+
+.ant-card-meta-title{
+    color: var(--primaryColor) !important;
+}
+
+.ant-card-meta-description{
+    color: black !important;
+}
+/* one card css - end*/
+
 #not-found-container > div{
     font-size: large;
     text-align: center;
