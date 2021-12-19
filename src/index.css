@@ -1,12 +1,13 @@
 :root {
   --primaryColor: #0076e3;
   --errorColor: #ff4d4f;
+  --pageColor:#E6E6FA
 }
 html, body, #root, #root>div {
   height: 100%
 }
 body {
-  background-color: #E6E6FA !important;
+  background-color: var(--pageColor)!important;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
