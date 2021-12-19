@@ -18,7 +18,15 @@ const ContactCard = (props) => {
     <Card
       style={{ width: 400, marginBottom: "10px", marginRight: "10px" }}
       bordered
-      actions={[<EditModal key="edit" />, <DeleteModal />]}
+      actions={[
+        <EditModal key="edit" />,
+        <DeleteModal
+          id={props.data["id"]}
+          firstname={props.data["First_Name"]}
+          lastname={props.data["Last_Name"]}
+          description = {props.data["Description"]}
+        />,
+      ]}
     >
       <Meta
         style={{ textAlign: "justify" }}

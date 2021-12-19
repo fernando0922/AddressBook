@@ -53,7 +53,7 @@ const AddModal = () => {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
-        okText="SAVE"
+        okText="Save"
       >
         <div className="contact-add-container">
           <div style={{ marginRight: "10px" }}>

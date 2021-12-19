@@ -109,30 +109,6 @@
       "UpdatedDate": "2021-10-18T18:25:43.511Z"
     },
     {
-      "id": 5,
-      "First_Name": "John",
-      "Last_Name": "Smith",
-      "Birthday": "2001-04-23",
-      "Description": "He is my best friend",
-      "Emails": [
-        "john_smith@gmail.com",
-        "jsmith@hotmail.com"
-      ],
-      "Phones": [
-        {
-          "Type": "Mobile",
-          "Phone_Number": "123-123-1234"
-        },
-        {
-          "Type": "Home",
-          "Phone_Number": "123-123-1235"
-        }
-      ],
-      "OwnerId": 1,
-      "CreatedDate": "2021-10-13T18:25:43.511Z",
-      "UpdatedDate": "2021-10-18T18:25:43.511Z"
-    },
-    {
       "id": 5837,
       "First_Name": "Dhiraj",
       "Birthday": "1990-03-28",
@@ -154,29 +130,6 @@
       "OwnerId": 1,
       "CreatedDate": "2021-12-19T17:01:27.982Z",
       "UpdatedDate": "2021-12-19T17:01:27.982Z"
-    },
-    {
-      "id": 3587,
-      "First_Name": "Dhiraj",
-      "Birthday": "1990-03-28",
-      "Description": "I Know Him",
-      "Emails": [
-        "bond.dhiraj@gmail.com",
-        null
-      ],
-      "Phones": [
-        {
-          "Type": "Mobile",
-          "Phone_Number": "08880093594"
-        },
-        {
-          "Type": "Home",
-          "Phone_Number": "12345"
-        }
-      ],
-      "OwnerId": 1,
-      "CreatedDate": "2021-12-19T17:02:19.459Z",
-      "UpdatedDate": "2021-12-19T17:02:19.459Z"
     },
     {
       "id": 6698,
@@ -317,29 +270,6 @@
       "UpdatedDate": "2021-12-19T17:10:56.040Z"
     },
     {
-      "id": 2521,
-      "First_Name": "Ram",
-      "Birthday": "1999-11-11",
-      "Description": "ALL IS WELL",
-      "Emails": [
-        "bond.dhiraj@gmail.com",
-        null
-      ],
-      "Phones": [
-        {
-          "Type": "Mobile",
-          "Phone_Number": "08880093594"
-        },
-        {
-          "Type": "Home",
-          "Phone_Number": "945654322345432"
-        }
-      ],
-      "OwnerId": 1,
-      "CreatedDate": "2021-12-19T17:13:41.596Z",
-      "UpdatedDate": "2021-12-19T17:13:41.596Z"
-    },
-    {
       "id": 9991,
       "First_Name": "first",
       "Last_Name": "last",
@@ -410,30 +340,6 @@
       "OwnerId": 1,
       "CreatedDate": "2021-12-19T17:16:31.595Z",
       "UpdatedDate": "2021-12-19T17:16:31.595Z"
-    },
-    {
-      "id": 6180,
-      "First_Name": "asdf",
-      "Last_Name": "ghjk",
-      "Birthday": "2222-11-22",
-      "Description": "asdf ghjk l",
-      "Emails": [
-        "asd@asdf",
-        "ghj@ghj"
-      ],
-      "Phones": [
-        {
-          "Type": "Mobile",
-          "Phone_Number": "12345"
-        },
-        {
-          "Type": "Home",
-          "Phone_Number": "1234"
-        }
-      ],
-      "OwnerId": 1,
-      "CreatedDate": "2021-12-19T17:19:07.541Z",
-      "UpdatedDate": "2021-12-19T17:19:07.541Z"
     }
   ]
 }
