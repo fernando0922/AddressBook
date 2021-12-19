@@ -2,37 +2,59 @@ import React from "react";
 import { Card } from "antd";
 
 import "antd/dist/antd.css";
-import { HomeOutlined, MailOutlined, MobileOutlined, PhoneOutlined } from "@ant-design/icons/lib/icons";
+import {
+  HomeOutlined,
+  MailOutlined,
+  MobileOutlined,
+  PhoneOutlined,
+} from "@ant-design/icons/lib/icons";
 import DeleteModal from "../delete/DeleteModal";
 import EditModal from "../edit/EditModal";
 
 const { Meta } = Card;
 
-const ContactCard = () => {
+const ContactCard = (props) => {
   return (
     <Card
-      style={{ width: 400, marginBottom:"10px",marginRight:"10px"}}
+      style={{ width: 400, marginBottom: "10px", marginRight: "10px" }}
       bordered
-       actions={[<EditModal key="edit" />, <DeleteModal/>]}
+      actions={[<EditModal key="edit" />, <DeleteModal />]}
     >
       <Meta
-        style={{textAlign:"justify"}}
-        title="First_name Last_name"
-        description="First_name Last_name was botn in dd-mm-yyyy and is of xy years. In your words , 'This is the descriptionThis is the description.'"
+        style={{ textAlign: "justify" }}
+        title={`${props.data["First_Name"]} ${props.data["Last_Name"]}`}
+        description={`${props.data["First_Name"]} ${
+          props.data["Last_Name"]
+        } was born in ${props.data["Birthday"]} and is of ${
+          new Date().getFullYear() -
+          new Date(props.data["Birthday"]).getFullYear()
+        } years. In your words , "${props.data["Description"]}".`}
       />
 
       <div className="information-container">
         <div className="contact-Information">
           <div className="phone-information">
-            <p><MobileOutlined /> +912323223232323</p>
-            <p><PhoneOutlined /> +912323223232323</p>
-            <p><HomeOutlined /> +912323223232323</p>
+            {props.data["Phones"].map(a => {
+              if(a["Type"]==="Home"){
+               return <p key = {a["Phone_Number"]}>
+               <HomeOutlined /> {a["Phone_Number"]}
+             </p>
+              }else if(a["Type"]==="Mobile"){
+                return <p key = {a["Phone_Number"]}>
+                <MobileOutlined /> {a["Phone_Number"]}
+              </p>
+              }else{
+                return <p key = {a["Phone_Number"]}>
+                <PhoneOutlined /> {a["Phone_Number"]}
+              </p>
+              }
+            })}
           </div>
 
           <div className="email-information">
-            <p><MailOutlined /> one@one.com</p>
-            <p><MailOutlined /> one@one.com</p>
-            <p><MailOutlined /> one@one.com</p>
+            {props.data["Emails"].map(a => <p key={a}>
+              <MailOutlined /> {a}
+            </p>)}
           </div>
         </div>
       </div>

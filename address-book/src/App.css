@@ -100,5 +100,5 @@
 }
 
 .ant-spin-dot-item {
-  background-color: White !important;
+  background-color: var(--errorColor) !important;
 }

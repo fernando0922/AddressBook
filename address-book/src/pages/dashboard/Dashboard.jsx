@@ -1,21 +1,30 @@
-import React, { useEffect } from "react";
+import { Spin } from "antd";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getAllContacts } from "../../api/getAllContacts";
 import { checkExistance } from "../../service/Strorage";
 import ContactCard from "./card/ContactCard";
 import Header from "./Header";
 import UserOperation from "./UserOperation";
 
 const Dashboard = () => {
+  let navigate = useNavigate();
 
-  let navigate = useNavigate()
+  const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
-
-    if(!checkExistance("userData")){
-        navigate("/")
+    if (!checkExistance("userData")) {
+      navigate("/");
     }
-  
-  }, [])
+
+    getAllContacts()
+      .then((a) => {
+        setContacts(a);
+      })
+      .catch((e) => {
+        setContacts([]);
+      });
+  }, []);
 
   return (
     <div className="home-container">
@@ -28,9 +37,11 @@ const Dashboard = () => {
       </div>
 
       <div className="contact-list">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 1, 1, 1, 1, 1,1,1,1,1,1,1].map((a) => (
-          <ContactCard key={a} />
-        ))}
+        {contacts.length < 1 ? (
+          <Spin />
+        ) : (
+          JSON.parse(contacts)["data"].map((a) => <ContactCard key={a["ID"]} data = {a}/>)
+        )}
       </div>
     </div>
   );
