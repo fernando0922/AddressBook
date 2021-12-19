@@ -11,7 +11,7 @@ const { Meta } = Card;
 const ContactCard = () => {
   return (
     <Card
-      style={{ width: 400, marginBottom:"2%"}}
+      style={{ width: 400, marginBottom:"10px",marginRight:"10px"}}
       bordered
        actions={[<EditModal key="edit" />, <DeleteModal/>]}
     >

@@ -77,16 +77,20 @@
   margin-top: 7%;
   margin-bottom: 3%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
-.search-container{
-    width: 30%;
+.search-container {
+  width: 30%;
 }
 
 .contact-list {
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: safe;
   flex-wrap: wrap;
 }
 

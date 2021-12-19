@@ -15,7 +15,7 @@ const Dashboard = () => {
       </div>
 
       <div className="contact-list">
-        {[1, 2, 3, 4, 5, 6, 7].map((a) => (
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 1, 1, 1, 1, 1,1,1,1,1,1,1].map((a) => (
           <ContactCard key={a} />
         ))}
       </div>
