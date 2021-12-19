@@ -11,10 +11,13 @@ html, body, #root, #root>div {
     align-items: center;
 }
 
+#login-container{
+    width: 40%; 
+    margin-top: 3%;
+}
+
 .login-heading{
-    position: relative;
-    bottom: 6%;
-    left: 2%;
+    color: #1E90FF;
     text-decoration: underline;
 }
 

@@ -18,18 +18,14 @@ const Login = () => {
       <div id="login-container">
         <Form
           name="basic"
-          labelCol={{
-            span: 32,
-          }}
           wrapperCol={{
-            span: 0,
+            span: 32,
           }}
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
           autoComplete="off"
         >
           <Form.Item
-            label="Username"
             name="username"
             rules={[
               {
@@ -38,11 +34,10 @@ const Login = () => {
               },
             ]}
           >
-            <Input />
+            <Input placeholder="Username *"/>
           </Form.Item>
 
           <Form.Item
-            label="Password"
             name="password"
             rules={[
               {
@@ -51,20 +46,15 @@ const Login = () => {
               },
             ]}
           >
-            <Input.Password />
+            <Input.Password placeholder="Password *"/>
           </Form.Item>
 
           <Form.Item
-            wrapperCol={{
-              offset: 8,
-              span: 32,
-            }}
-            style={{ paddingLeft: "18%" }}
+           style={{textAlign:"center"}}
           >
             <Button
               type="primary"
               htmlType="submit"
-              style={{ textAlign: "center" }}
             >
               LOGIN
             </Button>
