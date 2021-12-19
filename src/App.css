@@ -18,9 +18,12 @@
     margin-top: 3%;
 }
 
-.login-heading{
+#login-heading{
     color: var(--primaryColor);
-    text-decoration: underline;
+}
+
+#login-error{
+    color: var(--errorColor);
 }
 
 #not-found-container > div{

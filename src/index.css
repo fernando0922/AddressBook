@@ -1,5 +1,6 @@
 :root {
   --primaryColor: #0076e3;
+  --errorColor: #ff4d4f;
 }
 html, body, #root, #root>div {
   height: 100%
