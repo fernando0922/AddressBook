@@ -1,19 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "antd/dist/antd.css";
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, Spin } from "antd";
+import { loginCheck } from "../../api/login";
+import { useNavigate } from "react-router-dom";
+import { addToStorage } from "../../service/Strorage";
 
 const Login = () => {
+  let navigate = useNavigate();
+
+  const [loading, setloading] = useState(false);
+
+  const [errorDisplay, setErrorDisplay] = useState(false);
+
   const onFinish = (values) => {
-    console.log("Success:", values);
+    setloading(true);
+    loginCheck(values["username"])
+      .then((a) => {
+        setloading(false);
+        addToStorage("userData", `{"id":${JSON.parse(a)[0]["ID"]},"username":"${JSON.parse(a)[0]["Username"]}"}`);
+        navigate("/home")
+      })
+      .catch((e) => {
+        setloading(false);
+        setErrorDisplay(true);
+      });
   };
 
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+    //in case any fields are empty
   };
+
   return (
     <div className="one-data-container">
-
-        <h3 id="login-heading">Address Book</h3>
+      <h3 id="login-heading">Address Book</h3>
 
       <div id="login-container">
         <Form
@@ -34,7 +53,7 @@ const Login = () => {
               },
             ]}
           >
-            <Input placeholder="Username *"/>
+            <Input placeholder="Username *" />
           </Form.Item>
 
           <Form.Item
@@ -46,24 +65,22 @@ const Login = () => {
               },
             ]}
           >
-            <Input.Password placeholder="Password *"/>
+            <Input.Password placeholder="Password *" />
           </Form.Item>
 
-          <Form.Item
-           style={{textAlign:"center"}}
-          >
-            <Button
-              type="primary"
-              htmlType="submit"
-            >
-              LOGIN
+          <Form.Item style={{ textAlign: "center" }}>
+            <Button type="primary" htmlType="submit">
+              {loading ? <Spin /> : "LOGIN"}
             </Button>
           </Form.Item>
         </Form>
       </div>
 
-      <h5 id="login-error">Incorrect Username or Password. Try Again</h5>
-
+      {errorDisplay ? (
+        <h5 id="login-error">Incorrect Username or Password. Try Again</h5>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

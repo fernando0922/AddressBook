@@ -98,3 +98,7 @@
   font-size: large;
   text-align: center;
 }
+
+.ant-spin-dot-item {
+  background-color: White !important;
+}

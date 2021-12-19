@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "antd/dist/antd.css";
-import { Button, Modal, Tooltip } from "antd";
+import { Button, Modal } from "antd";
 import { PlusOutlined } from "@ant-design/icons/lib/icons";
 
 const AddModal = () => {

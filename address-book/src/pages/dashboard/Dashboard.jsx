@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { checkExistance } from "../../service/Strorage";
 import ContactCard from "./card/ContactCard";
 import Header from "./Header";
 import UserOperation from "./UserOperation";
 
 const Dashboard = () => {
+
+  let navigate = useNavigate()
+
+  useEffect(() => {
+
+    if(!checkExistance("userData")){
+        navigate("/")
+    }
+  
+  }, [])
+
   return (
     <div className="home-container">
       <div className="nav-header">

@@ -1,0 +1,56 @@
+{
+    "users" :[{
+        "ID": 1,
+        "Username": "user",
+        "Password": "User1Password"
+        }, {
+        "ID": 2,
+        "Username": "user2",
+        "Password": "User2Password"
+        }
+        ],
+  "contacts": [
+    {
+      "ID": 1,
+      "First_Name": "John",
+      "Last_Name": "Smith",
+      "Birthday": "2001-04-23",
+      "Description": "He is my best friend",
+      "Emails": ["john_smith@gmail.com", "jsmith@hotmail.com"],
+      "Phones": [
+        {
+          "Type": "Mobile",
+          "Phone_Number": "123-123-1234"
+        },
+        {
+          "Type": "Home",
+          "Phone_Number": "123-123-1235"
+        }
+      ],
+      "OwnerId": 1,
+      "CreatedDate": "2021-10-13T18:25:43.511Z",
+      "UpdatedDate": "2021-10-18T18:25:43.511Z"
+    },
+    {
+      "ID": 2,
+      "First_Name": "Mary",
+      "Last_Name": "Smith",
+      "Birthday": "2002-10-01",
+      "Description": "She is my best friend's wife",
+      "Emails": ["mary_smith@gmail.com", "msmith@hotmail.com"],
+      "Phones": [
+        {
+          "Type": "Mobile",
+          "Phone_Number": "321-3454-1234"
+        },
+        {
+          "Type": "Home",
+          "Phone_Number": "123-123-1235"
+        }
+      ],
+      "OwnerId": 2,
+      "CreatedDate": "2021-10-13T18:25:43.511Z",
+      "UpdatedDate": "2021-10-18T18:25:43.511Z"
+    }
+  ]
+}
