@@ -8,7 +8,7 @@ const NotFound = () => {
     let navigate = useNavigate();
 
     return (
-        <div className="not-found-container">
+        <div className="one-data-container" id="not-found-container">
         <Result
         status="404"
         title="The page you visited does not exist."
