@@ -155,52 +155,6 @@
       "UpdatedDate": "2021-12-19T17:03:43.523Z"
     },
     {
-      "id": 5676,
-      "First_Name": "Dhiraj",
-      "Birthday": "1990-03-28",
-      "Description": "I Know Him",
-      "Emails": [
-        "bond.dhiraj@gmail.com",
-        null
-      ],
-      "Phones": [
-        {
-          "Type": "Mobile",
-          "Phone_Number": "08880093594"
-        },
-        {
-          "Type": "Home",
-          "Phone_Number": "12345"
-        }
-      ],
-      "OwnerId": 1,
-      "CreatedDate": "2021-12-19T17:04:04.661Z",
-      "UpdatedDate": "2021-12-19T17:04:04.661Z"
-    },
-    {
-      "id": 7431,
-      "First_Name": "Dhiraj",
-      "Birthday": "1990-03-28",
-      "Description": "I Know Him",
-      "Emails": [
-        "bond.dhiraj@gmail.com",
-        null
-      ],
-      "Phones": [
-        {
-          "Type": "Mobile",
-          "Phone_Number": ""
-        },
-        {
-          "Type": "Home",
-          "Phone_Number": "12345"
-        }
-      ],
-      "OwnerId": 1,
-      "CreatedDate": "2021-12-19T17:05:54.993Z",
-      "UpdatedDate": "2021-12-19T17:05:54.993Z"
-    },
-    {
       "id": 3789,
       "First_Name": "Dhiraj",
       "Birthday": "1990-03-28",
