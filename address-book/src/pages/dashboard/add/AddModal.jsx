@@ -139,7 +139,7 @@ const AddModal = () => {
             />
             <Input
               style={{ marginBottom: "10px" }}
-              placeholder="Home Number"
+              placeholder="Home Phone Number"
               value={userInformation.Phones_Home}
               onChange={(event) =>
                 setuserInformation({

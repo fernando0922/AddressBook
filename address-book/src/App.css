@@ -87,10 +87,10 @@
 }
 
 .contact-list {
-  padding-left: 10px;
+  padding-left: 20px;
   padding-right: 10px;
   display: flex;
-  justify-content: safe;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 

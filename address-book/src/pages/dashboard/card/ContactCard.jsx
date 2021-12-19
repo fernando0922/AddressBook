@@ -19,7 +19,7 @@ const ContactCard = (props) => {
       style={{ width: 400, marginBottom: "10px", marginRight: "10px" }}
       bordered
       actions={[
-        <EditModal key="edit" />,
+        <EditModal key="edit" data={props.data}/>,
         <DeleteModal
           id={props.data["id"]}
           firstname={props.data["First_Name"]}
