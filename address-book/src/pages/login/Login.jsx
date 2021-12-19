@@ -17,7 +17,7 @@ const Login = () => {
     loginCheck(values["username"])
       .then((a) => {
         setloading(false);
-        addToStorage("userData", `{"id":${JSON.parse(a)[0]["ID"]},"username":"${JSON.parse(a)[0]["Username"]}"}`);
+        addToStorage("userData", `{"id":${JSON.parse(a)[0]["id"]},"username":"${JSON.parse(a)[0]["Username"]}"}`);
         navigate("/home")
       })
       .catch((e) => {

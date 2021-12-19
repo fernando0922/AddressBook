@@ -102,3 +102,7 @@
 .ant-spin-dot-item {
   background-color: var(--errorColor) !important;
 }
+
+.contact-add-container{
+  display: flex;
+}

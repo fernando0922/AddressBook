@@ -40,7 +40,7 @@ const Dashboard = () => {
         {contacts.length < 1 ? (
           <Spin />
         ) : (
-          JSON.parse(contacts)["data"].map((a) => <ContactCard key={a["ID"]} data = {a}/>)
+          JSON.parse(contacts)["data"].map((a) => <ContactCard key={a["id"]} data = {a}/>)
         )}
       </div>
     </div>

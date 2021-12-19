@@ -25,36 +25,44 @@ const ContactCard = (props) => {
         title={`${props.data["First_Name"]} ${props.data["Last_Name"]}`}
         description={`${props.data["First_Name"]} ${
           props.data["Last_Name"]
-        } was born in ${props.data["Birthday"]} and is of ${
+        } was born in ${props.data["Birthday"]} and is ${
           new Date().getFullYear() -
           new Date(props.data["Birthday"]).getFullYear()
-        } years. In your words , "${props.data["Description"]}".`}
+        } years of age. In your words , "${props.data["Description"]}".`}
       />
 
       <div className="information-container">
         <div className="contact-Information">
           <div className="phone-information">
-            {props.data["Phones"].map(a => {
-              if(a["Type"]==="Home"){
-               return <p key = {a["Phone_Number"]}>
-               <HomeOutlined /> {a["Phone_Number"]}
-             </p>
-              }else if(a["Type"]==="Mobile"){
-                return <p key = {a["Phone_Number"]}>
-                <MobileOutlined /> {a["Phone_Number"]}
-              </p>
-              }else{
-                return <p key = {a["Phone_Number"]}>
-                <PhoneOutlined /> {a["Phone_Number"]}
-              </p>
+            {props.data["Phones"].map((a) => {
+              if (a["Type"] === "Home") {
+                return (
+                  <p key={a["Phone_Number"]}>
+                    <HomeOutlined /> {a["Phone_Number"]}
+                  </p>
+                );
+              } else if (a["Type"] === "Mobile") {
+                return (
+                  <p key={a["Phone_Number"]}>
+                    <MobileOutlined /> {a["Phone_Number"]}
+                  </p>
+                );
+              } else {
+                return (
+                  <p key={a["Phone_Number"]}>
+                    <PhoneOutlined /> {a["Phone_Number"]}
+                  </p>
+                );
               }
             })}
           </div>
 
           <div className="email-information">
-            {props.data["Emails"].map(a => <p key={a}>
-              <MailOutlined /> {a}
-            </p>)}
+            {props.data["Emails"].map((a) => (
+              <p key={a}>
+                <MailOutlined /> {a}
+              </p>
+            ))}
           </div>
         </div>
       </div>
