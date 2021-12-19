@@ -47,7 +47,26 @@
 }
 /* one card css - end*/
 
+
+
+.home-container{
+    height: 100%;
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-list{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 #not-found-container > div{
     font-size: large;
     text-align: center;
 }
+
