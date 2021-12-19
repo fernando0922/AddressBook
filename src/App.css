@@ -1,10 +1,8 @@
-html, body, #root, #root>div {
-    height: 100%
-  }
+
 
  .ant-btn-primary{
-    background-color: #a304fb !important;
-    border-color: #a304fb !important;
+    background-color: var(--primaryColor) !important;
+    border-color: var(--primaryColor) !important;
  }
 
 .one-data-container{
@@ -21,7 +19,7 @@ html, body, #root, #root>div {
 }
 
 .login-heading{
-    color: #a905fa;
+    color: var(--primaryColor);
     text-decoration: underline;
 }
 
