@@ -6,6 +6,7 @@
 - npm start
 
 ## To run mock server, navigate into mock-server.
+- npm install
 - npm start
 
 ---
