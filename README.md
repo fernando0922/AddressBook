@@ -13,7 +13,8 @@
 users ID is id.
 contacts ID is id.
 
-This is for becase json-server is more complatable with "id" rather then "ID".
+This is for becase json-server fails in post request as it needs "id" insted of "ID".
+Not only post request, even put and delete cannout be done by "ID".
 
 Below are JSON
 I am using "id" and not "ID"
@@ -104,3 +105,9 @@ Port Number:
 - React runs on port 3000
 - json server on port 3001
 ---
+
+id for creating contacts is mandatory.
+so have used random number generation strategy.
+
+---
+## Thanks for the opportunity
